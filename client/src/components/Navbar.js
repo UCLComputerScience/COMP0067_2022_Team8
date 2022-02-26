@@ -83,7 +83,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
-              <Link style={{textDecoration: "none", color:"white"}} to={`/`}>
+              <Link style={{textDecoration: "none", color: '#EFFAD3'}} to={`/`}>
                 IXN For Good
               </Link>
             </Button>
@@ -130,12 +130,13 @@ const ResponsiveAppBar = () => {
             </Menu>
           </Box>
           <Typography
+            style={{ color: '#EFFAD3', fontSize: 24 }}
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            IXN For Good
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -150,17 +151,6 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
-
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-
         </Toolbar>
       </Container>
     </AppBar>
