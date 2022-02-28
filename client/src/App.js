@@ -1,24 +1,29 @@
-import './styles/App.css';
-import ResponsiveAppBar from './components/Navbar.js';
-import { Route, Routes } from 'react-router';
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
-import Gallery from './components/Gallery'
-import Partners from './components/Partners'
+import React from 'react';
+import Navbar from './components/Navbar';
+import './App.css';
+import Home from './components/pages/Home';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Contact from './components/pages/Contact';
+import About from './components/pages/About';
+import CaseStudies from './components/pages/CaseStudies';
+import Gallery from './components/pages/Gallery';
 
 function App() {
   return (
-    <div className="App">
-      <ResponsiveAppBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/About' element={<About />} />
-        <Route path='/Contact' element={<Contact />} />
-        <Route path='/Gallery' element={<Gallery />} />
-        <Route path='/Partners' element={<Partners />} />
-      </Routes>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/gallery' component={Gallery} />
+          <Route path='/case-studies' component={CaseStudies} />
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
