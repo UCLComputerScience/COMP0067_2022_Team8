@@ -1,11 +1,16 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
+const { Videos } = require("./models");
 app.use(express.json());
 app.use(cors());
 
 const db = require('./models');
+
+db.Videos.destroy({
+    where: {},
+    truncate: true
+})
 
 // Routers
 const videoRouter = require('./routes/Videos');
