@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "ixnforgood",
+    "password": "root",
     "database": "IXNForGood",
     "host": "localhost",
     "dialect": "mysql"
