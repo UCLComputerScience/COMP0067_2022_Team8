@@ -10,17 +10,17 @@ let parser = csv.parse({
     columns: true
 })
 
-var transform = csv.transform(function(row) {
+var transform = csv.transform(function (row) {
     var resultObj = {
         title: row['title'],
         description: row['description'],
         url: row['url']
     }
     Videos.create(resultObj)
-        .then(function() {
+        .then(function () {
             console.log('Record created');
         })
-        .catch(function(err) {
+        .catch(function (err) {
             console.log('Error encountered: ' + err);
         })
 })
@@ -30,6 +30,11 @@ input.pipe(parser).pipe(transform)
 router.get("/", async (req, res) => {
     const listOfVideos = await Videos.findAll();
     res.json(listOfVideos);
+});
+
+router.get("/mostrecent", async (req, res) => {
+    const listOfRecentVideos = await Videos.findAll({ order: [["id", 'DESC']], limit: 2 });
+    res.json(listOfRecentVideos);
 });
 
 router.post("/", async (req, res) => {
