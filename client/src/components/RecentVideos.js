@@ -4,11 +4,11 @@ import axios from 'axios';
 
 
 function RecentVideos() {
-    const [listOfVideos, setListOfVideos] = useState([]);
+    const [listOfRecentVideos, setListOfRecentVideos] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/videos").then((response) => {
-            setListOfVideos(response.data);
+        axios.get("http://localhost:3001/videos/mostrecent").then((response) => {
+            setListOfRecentVideos(response.data);
         });
     }, []);
 
@@ -18,7 +18,7 @@ function RecentVideos() {
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='grid-layout'>
-                        {listOfVideos.map((value, idx) => {
+                        {listOfRecentVideos.map((value, idx) => {
                             return (
                                 <li className="video">
                                     <div className="title">{value.title}</div>
