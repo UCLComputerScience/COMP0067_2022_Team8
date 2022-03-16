@@ -2,12 +2,11 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-import {Link} from "react-router-dom";
 
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='/videos/teamwork.mp4' autoPlay loop muted />
       <h1>Enpowering Charities with the Art of Possible.</h1>
       <p>Industry Exchange Network For Good</p>
       <div className='hero-btns'>
@@ -16,7 +15,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-              <Link to='/brochure'>Read more in our brochure</Link>
+          Read more in our brochure
         </Button>
       </div>
     </div>
