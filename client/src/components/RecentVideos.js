@@ -13,7 +13,7 @@ function RecentVideos() {
     }, []);
 
     return (
-        <div className='cards'>
+        <div className='cards recent-vid-background'>
             <h1>Recent Videos</h1>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
@@ -21,9 +21,7 @@ function RecentVideos() {
                         {listOfRecentVideos.map((value, idx) => {
                             return (
                                 <li className="video">
-                                    <div className="title">{value.title}</div>
                                     <iframe className="url" width="396" height="300" src={value.url}></iframe>
-                                    <div className="description">{value.description}</div>
                                 </li>
                             )
                         })}
