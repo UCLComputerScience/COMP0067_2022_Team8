@@ -23,9 +23,7 @@ function VideoCards() {
             {listOfVideos.map((value, idx) => {
               return (
                 <li className="video">
-                    <div className="title">{value.title}</div>
                     <iframe className="url" width="396" height="300" src={value.url}></iframe>
-                    <div className="description">{value.description}</div>
                 </li>
               )
             })}
