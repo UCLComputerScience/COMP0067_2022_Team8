@@ -38,6 +38,11 @@ video {
   margin-top: 32px;
 }
 
+.hero-btns a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .hero-btns .btn {
   margin: 6px;
 }
