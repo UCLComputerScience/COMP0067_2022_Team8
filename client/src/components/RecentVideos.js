@@ -7,7 +7,7 @@ function RecentVideos() {
     const [listOfRecentVideos, setListOfRecentVideos] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/videos/mostrecent").then((response) => {
+        axios.get("https://ixn-for-good.herokuapp.com/videos/mostrecent").then((response) => {
             setListOfRecentVideos(response.data);
         });
     }, []);

@@ -33,7 +33,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/mostrecent", async (req, res) => {
-    const listOfRecentVideos = await Videos.findAll({ order: [["id", 'DESC']], limit: 2 });
+    const listOfRecentVideos = await Videos.findAll({ order: [["id", 'DESC']], limit: 3 });
     res.json(listOfRecentVideos);
 });
 
