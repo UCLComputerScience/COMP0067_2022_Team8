@@ -1,0 +1,26 @@
+import React from 'react';
+import '../App.css';
+import { Button } from './Button';
+import './HeroSection.css';
+import {Link} from "react-router-dom";
+
+function HeroSection() {
+  return (
+    <div className='hero-container'>
+      <video src='/videos/teamwork.mp4' autoPlay loop muted />
+      <h1>Enpowering Charities with the Art of Possible.</h1>
+      <p>Industry Exchange Network For Good</p>
+      <div className='hero-btns'>
+        <Button
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+        >
+           <Link to='/About'>Read more in About us</Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+export default HeroSection;
