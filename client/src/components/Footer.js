@@ -16,35 +16,7 @@ function Footer() {
         
       </section>
       <div className='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/'>Our Partners</Link>
-            <Link to='/'>Mission Statements</Link>
-            <Link to='/'>Digital Brochure</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>Gallery</h2>
-            <Link to='/'>Watch Videos</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Case Studies</h2>
-            <Link to='/'>See case studies from our partners</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>LinkedIn</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
-        </div>
+      
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>

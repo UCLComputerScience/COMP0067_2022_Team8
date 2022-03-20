@@ -75,6 +75,15 @@ function Navbar() {
                 Case Studies
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/blog'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Blog
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
