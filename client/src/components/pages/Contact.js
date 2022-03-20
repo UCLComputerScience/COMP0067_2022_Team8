@@ -5,17 +5,16 @@ import './Contact.css'
 export default function Contact() {
   return (
     <>
-    <h1 class='services'>Contact Us</h1>
+    <h1 class='services'>Contact Email: info@ixnforgood.com</h1>
+    
     <div class='contact-container'>
-      <div class="contact_msg">
-          <p>If you have any questions or want to join us, please contact us with the following email:</p>
-      </div>
+      
       <div class="email_group">
           <div class="title_con">
             <img class="icon" src="/images/email.png"/>
           </div>
           <div>
-            info@ixnforgood.com
+              Welcome to contact us if you have any question!
           </div>
       </div>
     </div>
