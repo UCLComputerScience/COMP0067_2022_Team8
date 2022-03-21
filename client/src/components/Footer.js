@@ -13,17 +13,16 @@ function Footer() {
         <p className='footer-subscription-text'>
           Connecting charities and students
         </p>
-        
+
       </section>
       <div className='footer-links'>
-      
+
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               IXN For Good
-              <i className='fab fa-typo3' />
             </Link>
           </div>
           <small className='website-rights'>IXN For Good © 2022</small>
