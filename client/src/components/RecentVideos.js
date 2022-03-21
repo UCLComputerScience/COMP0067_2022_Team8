@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './RecentVideos.css';
 import axios from 'axios';
+import { Button } from './Button';
+import './Button.css';
+import { Link } from 'react-router-dom';
 
 
 function RecentVideos() {
@@ -27,6 +30,15 @@ function RecentVideos() {
                         })}
                     </ul>
                 </div>
+            </div>
+            <div className='hero-btns'>
+                <Button
+                    className='btns'
+                    buttonStyle='btn--outline'
+                    buttonSize='btn--large'
+                >
+                    <Link to='/gallery'>See More</Link>
+                </Button>
             </div>
         </div>
     )
