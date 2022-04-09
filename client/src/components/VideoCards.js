@@ -1,12 +1,23 @@
 import React from 'react';
-import './VideoCards.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Button } from './Button';
-import './Button.css';
+import { Pagination } from "@material-ui/lab";
+import usePagination from "./Pagination";
+import './VideoCards.css';
 
 function VideoCards() {
   const [listOfVideos, setListOfVideos] = useState([]);
+
+  let [page, setPage] = useState(1);
+  const PER_PAGE = 6;
+
+  const count = Math.ceil(listOfVideos.length / PER_PAGE);
+  const _DATA = usePagination(listOfVideos, PER_PAGE);
+
+  const handleChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
+  };
 
   useEffect(() => {
     axios.get("https://ixn-for-good.herokuapp.com/videos").then((response) => {
@@ -20,17 +31,24 @@ function VideoCards() {
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='grid-layout'>
-            {listOfVideos.map((value, idx) => {
+            {_DATA.currentData().map(v => {
               return (
-                <li className="video">
-                    <iframe className="url" width="396" height="300" src={value.url}></iframe>
+                <li key={v.id} className="video">
+                  <iframe className="url" width="396" height="300" src={v.url}></iframe>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
       </div>
-      <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>See more here</Button>
+      <Pagination
+        count={count}
+        size="large"
+        page={page}
+        variant="outlined"
+        shape="rounded"
+        onChange={handleChange}
+      />
     </div>
   );
 }
