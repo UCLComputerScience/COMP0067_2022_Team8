@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import Cards from '../Cards';
+import MedBlog from '../MedBlogs';
 import RecentVideos from '../RecentVideos'
 import HeroSection from '../HeroSection';
 
@@ -9,7 +9,7 @@ function Home() {
     <>
       <HeroSection />
       <RecentVideos />
-      <Cards />
+      <MedBlog />
     </>
   );
 }
