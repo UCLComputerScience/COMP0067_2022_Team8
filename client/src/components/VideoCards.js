@@ -4,9 +4,13 @@ import { useEffect, useState } from 'react';
 import { Pagination } from "@material-ui/lab";
 import usePagination from "./Pagination";
 import './VideoCards.css';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 
 function VideoCards() {
   const [listOfVideos, setListOfVideos] = useState([]);
+
+  const [searchTerm, setSearchTerm] = useState(''); 
 
   let [page, setPage] = useState(1);
   const PER_PAGE = 6;
@@ -28,10 +32,28 @@ function VideoCards() {
   return (
     <div className='cards background'>
       <h1 className='gallery-title'>Gallery</h1>
+      <Box
+        component="form"
+        sx={{
+          '& > :not(style)': { m: 1, width: '30vw' },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField id="outlined-basic" label="Search video..." variant="outlined" onChange={(evt) => {setSearchTerm(evt.target.value)}} />
+      </Box>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='grid-layout'>
-            {_DATA.currentData().map(v => {
+            {_DATA.currentData()
+              .filter((val) => {
+                if (searchTerm === "") {
+                  return val;
+                } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                val.description.toLowerCase().includes(searchTerm.toLowerCase())) {
+                  return val;
+                }
+            }).map(v => {
               return (
                 <li key={v.id} className="video">
                   <iframe className="url" width="396" height="300" src={v.url}></iframe>
