@@ -21,6 +21,13 @@ function Cards() {
               label='Medium'
               path='https://medium.com/@infoixnforgood/sin-france-organises-first-uk-france-educational-hackathon-on-ai-for-the-common-good-at-paris-3240cd710975'
             />
+            <CardItem
+              src='https://i.stack.imgur.com/twIm6.png'
+              text='Click here---See more case studies in our medium blog page'
+        
+              label='Blog Page'
+              path='https://medium.com/@infoixnforgood'
+            />
           </ul>
         </div>
       </div>
