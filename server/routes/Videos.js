@@ -37,10 +37,10 @@ router.get("/mostrecent", async (req, res) => {
     res.json(listOfRecentVideos);
 });
 
-router.post("/", async (req, res) => {
-    const video = req.body;
-    await Videos.create(video);
-    res.json(video);
-})
+// router.post("/", async (req, res) => {
+//     const video = req.body;
+//     await Videos.create(video);
+//     res.json(video);
+// })
 
 module.exports = router;
