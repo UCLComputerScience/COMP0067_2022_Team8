@@ -10,36 +10,16 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-9.jpg'
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id.'
-              label='Adventure'
-              path='/services'
+              src='https://miro.medium.com/max/1400/0*DJOLofBzsk1pMHx-'
+              text='Tackling Challenges in Food poverty to build a #HungerFreeFuture'
+              label='#HungerFreeFuture'
+              path='https://medium.com/@infoixnforgood/tackling-challenges-in-food-poverty-to-build-a-hungerfreefuture-f48e0c1184a6'
             />
             <CardItem
-              src='images/img-2.jpg'
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id.'
-              label='Luxury'
-              path='/services'
-            />
-          </ul>
-          <ul className='cards__items'>
-            <CardItem
-              src='images/img-3.jpg'
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id.'
-              label='Mystery'
-              path='/services'
-            />
-            <CardItem
-              src='images/img-4.jpg'
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id.'
-              label='Adventure'
-              path='/products'
-            />
-            <CardItem
-              src='images/img-8.jpg'
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id.'
-              label='Adrenaline'
-              path='/sign-up'
+              src='https://miro.medium.com/max/1048/1*nqQBGAxWHR-eCoK3751K1w.png'
+              text='SIN France organises first UK-France Educational Hackathon on AI for the Common Good at Paris British Embassy'
+              label='Medium'
+              path='https://medium.com/@infoixnforgood/sin-france-organises-first-uk-france-educational-hackathon-on-ai-for-the-common-good-at-paris-3240cd710975'
             />
           </ul>
         </div>
