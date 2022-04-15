@@ -54,7 +54,8 @@ export default function About() {
             <div class="title_con">
                 <h1 class="title">Our Partner</h1>
             </div>
-            <div class="item_row">
+        
+            <div class="items">
                 <a href="https://www.ibm.com/uk-en">
                     <div class="item_img">
                         <img class="par_img" src="/images/1.jpg"/>
@@ -79,8 +80,6 @@ export default function About() {
                         <p class="par_name">Avanade</p>
                     </div>
                 </a>
-            </div>
-            <div class="item_row">
                 <a href="https://www.nttdata.com/global/en/">
                     <div class="item_img">
                         <img class="par_img" src="/images/5.jfif"/>

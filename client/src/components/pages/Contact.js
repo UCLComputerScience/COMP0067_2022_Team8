@@ -5,7 +5,7 @@ import './Contact.css'
 export default function Contact() {
   return (
     <>
-    <h1 class='services'>Contact Email: info@ixnforgood.com</h1>
+    <h1 class='services'>Contact Us: info@ixnforgood.com</h1>
     
     <div class='contact-container'>
       
@@ -14,7 +14,7 @@ export default function Contact() {
             <img class="icon" src="/images/email.png"/>
           </div>
           <div>
-              Welcome to contact us if you have any question!
+              Please contact us for more information!
           </div>
       </div>
     </div>

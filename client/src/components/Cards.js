@@ -1,31 +1,59 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Cards() {
+  const mediumURl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@infoixnforgood"
+
+  const [profile, setProfile] = useState({
+    name: 'IXNforGood',
+    profileImage: '',
+    profileURL: ''
+  })
+
+  const [blog, setBlog] = useState({
+      item: [],
+      isLoading: true,
+      error: null,
+  })
+
+  useEffect(() => {
+      axios.get(mediumURl).then(info => {
+          const image = info.data.feed.image;
+          const link = info.data.feed.link;
+          const blogs = info.data.items;
+
+          setProfile(p => ({ ...p, profileURL: link, profileImage: image }))
+          setBlog({ item: blogs, isLoading: false })
+      })
+          .catch(err => setBlog({ error: err.message }))
+  }, [axios])
+
+
+
   return (
     <div className='cards'>
       <h1>Case Studies</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
-            <CardItem
-              src='https://miro.medium.com/max/1400/0*DJOLofBzsk1pMHx-'
-              text='Tackling Challenges in Food poverty to build a #HungerFreeFuture'
-              label='#HungerFreeFuture'
-              path='https://medium.com/@infoixnforgood/tackling-challenges-in-food-poverty-to-build-a-hungerfreefuture-f48e0c1184a6'
-            />
-            <CardItem
-              src='https://miro.medium.com/max/1048/1*nqQBGAxWHR-eCoK3751K1w.png'
-              text='SIN France organises first UK-France Educational Hackathon on AI for the Common Good at Paris British Embassy'
-              label='Medium'
-              path='https://medium.com/@infoixnforgood/sin-france-organises-first-uk-france-educational-hackathon-on-ai-for-the-common-good-at-paris-3240cd710975'
-            />
+            {blog.item.map(v => {
+              return (
+                <CardItem
+                  src={v.thumbnail}
+                  text={v.title}
+                  label='Medium blog'
+                  path={v.link}
+                />
+              );}
+            )}
             <CardItem
               src='https://i.stack.imgur.com/twIm6.png'
-              text='Click here---See more case studies in our medium blog page'
+              text='See all case studies in our Medium blog page'
         
-              label='Blog Page'
+              label='Other articles'
               path='https://medium.com/@infoixnforgood'
             />
           </ul>
