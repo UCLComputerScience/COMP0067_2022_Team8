@@ -51,7 +51,7 @@ function Cards() {
             )}
             <CardItem
               src='https://i.stack.imgur.com/twIm6.png'
-              text='Click here to see more case studies in our Medium blog page'
+              text='See all case studies in our Medium blog page'
         
               label='Other articles'
               path='https://medium.com/@infoixnforgood'

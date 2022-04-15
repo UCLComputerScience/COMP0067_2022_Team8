@@ -18,7 +18,7 @@ function RecentVideos() {
     return (
         <div className='cards recent-vid-background'>
             <h1>Recent Videos</h1>
-            <div className='cards__container'>
+            <div className='recent__cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='grid-layout'>
                         {listOfRecentVideos.map((value, idx) => {
