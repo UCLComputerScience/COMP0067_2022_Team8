@@ -23,11 +23,13 @@ export default function About() {
     <>
       <div className='about'>About</div>
       <div className='about-tabs'>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} display="flex" justifyContent="center" width="100%">
         <Tabs 
           value={value} 
-          onChange={handleChange} 
+          onChange={handleChange}
           centered
+          variant="scrollable"
+          scrollButtons="auto"
           allowScrollButtonsMobile
           aria-label="basic tabs"
           >
