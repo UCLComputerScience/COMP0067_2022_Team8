@@ -20,15 +20,15 @@ function RecentVideos() {
             <h1>Recent Videos</h1>
             <div className='recent__cards__container'>
                 <div className='cards__wrapper'>
-                    <ul className='grid-layout'>
+                    <div className='recent-grid-layout'>
                         {listOfRecentVideos.map((value, idx) => {
                             return (
-                                <li className="video">
+                                <div className="video">
                                     <iframe className="url" width="396" height="300" src={value.url}></iframe>
-                                </li>
+                                </div>
                             )
                         })}
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div className='hero-btns'>

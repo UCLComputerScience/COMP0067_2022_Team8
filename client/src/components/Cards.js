@@ -7,12 +7,6 @@ import axios from 'axios';
 function Cards() {
   const mediumURl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@infoixnforgood"
 
-  const [profile, setProfile] = useState({
-    name: 'IXNforGood',
-    profileImage: '',
-    profileURL: ''
-  })
-
   const [blog, setBlog] = useState({
       item: [],
       isLoading: true,
@@ -25,7 +19,6 @@ function Cards() {
           const link = info.data.feed.link;
           const blogs = info.data.items;
 
-          setProfile(p => ({ ...p, profileURL: link, profileImage: image }))
           setBlog({ item: blogs, isLoading: false })
       })
           .catch(err => setBlog({ error: err.message }))
@@ -36,7 +29,7 @@ function Cards() {
   return (
     <div className='cards'>
       <h1>Case Studies</h1>
-      <div className='cards__container'>
+      <div className='blog__cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             {blog.item.map(v => {
