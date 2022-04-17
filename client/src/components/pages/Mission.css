@@ -8,11 +8,11 @@
     display: inline-block;
 }
 .middle_panel{
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 .mission_des p{
-    font-size: 1.7em;
+    font-size: 3vw;
     margin-top: 20px;
     margin-bottom: 50px;
 } 
