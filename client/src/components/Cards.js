@@ -15,16 +15,12 @@ function Cards() {
 
   useEffect(() => {
       axios.get(mediumURl).then(info => {
-          const image = info.data.feed.image;
-          const link = info.data.feed.link;
           const blogs = info.data.items;
 
           setBlog({ item: blogs, isLoading: false })
       })
-          .catch(err => setBlog({ error: err.message }))
+          .catch(err => setBlog({ item: [], error: err.message }))
   }, [axios])
-
-
 
   return (
     <div className='cards'>

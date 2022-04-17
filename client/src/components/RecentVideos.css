@@ -22,15 +22,11 @@ h1 {
   .video {
     width: 400px;
     height: 300px;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    border: 1px solid lightgray;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background-color: #A8DDA8;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   
   .video:hover {
@@ -40,7 +36,6 @@ h1 {
   
   .video .title {
     flex: 20%;
-    border-bottom: 1px solid #354463;
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     display: grid;
     place-content: center;
@@ -55,14 +50,11 @@ h1 {
   
   .video .description{
     flex: 20%;
-    border-top: 1px solid #C1F7D5;
     display: flex;
     align-items: center;
     padding-left: 15px;
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     color: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
   }
   
   .recent-vid-background {
