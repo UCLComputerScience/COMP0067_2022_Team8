@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/teamwork.mp4' autoPlay loop muted />
       <h1>Enpowering Charities with the Art of Possible.</h1>
       <p>Industry Exchange Network For Good</p>
       <div className='hero-btns'>
