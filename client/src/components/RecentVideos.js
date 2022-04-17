@@ -19,11 +19,11 @@ function RecentVideos() {
         <div className='cards recent-vid-background'>
             <h1>Recent Videos</h1>
             <div className='recent__cards__container'>
-                <div className='cards__wrapper'>
+                <div className='recent__cards__wrapper'>
                     <div className='recent-grid-layout'>
                         {listOfRecentVideos.map((value, idx) => {
                             return (
-                                <div className="video">
+                                <div className="recent-video">
                                     <iframe className="url" width="396" height="300" src={value.url}></iframe>
                                 </div>
                             )
