@@ -23,6 +23,7 @@ h1 {
     position: relative;
     overflow: hidden;
     width: 100%;
+    margin: 10px;
     padding-top: 30%;
   }
 
@@ -60,3 +61,12 @@ h1 {
     margin: 0 auto;
     margin-top: 50px;
   }
+
+  @media screen and (max-width: 960px) {
+    .recent-grid-layout {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
