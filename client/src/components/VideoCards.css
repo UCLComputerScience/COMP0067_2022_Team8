@@ -14,8 +14,11 @@ h1 {
 
 .gallery-see-more {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  
+  font-size: 40px; 
+}
+
+.url {
+  border: none;
 }
 
 .video {
@@ -33,6 +36,7 @@ h1 {
   right: 0;
   width: 100%;
   height: 100%;
+  padding: 15px;
 }
 
 .video:hover {

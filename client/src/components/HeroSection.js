@@ -15,7 +15,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-           <Link to='/About'>Read more in About us</Link>
+           <Link to='/About'>Read more</Link>
         </Button>
       </div>
     </div>
