@@ -33,7 +33,7 @@ export default function About() {
           allowScrollButtonsMobile
           aria-label="basic tabs"
           >
-          <Tab icon={<InfoIcon />} label="Mission Statements"  {...a11yProps(0)} />
+          <Tab icon={<InfoIcon />} label="Mission Statement"  {...a11yProps(0)} />
           <Tab icon={<PeopleIcon />} label="Our Partners" {...a11yProps(1)} />
           <Tab icon={<MenuBookIcon />} label="Brochure" {...a11yProps(2)} />
         </Tabs>
@@ -54,7 +54,7 @@ export default function About() {
       <TabPanel value={value} index={1}>
       <div>
             <div class="title_con">
-                <h1 class="title">Our Partner</h1>
+                <h1 class="title">Our Partners</h1>
             </div>
         
             <div class="items">

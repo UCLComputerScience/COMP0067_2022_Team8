@@ -24,7 +24,7 @@ function RecentVideos() {
                         {listOfRecentVideos.map((value, idx) => {
                             return (
                                 <div className="recent-video">
-                                    <iframe className="url" width="396" height="300" src={value.url}></iframe>
+                                    <iframe className="recent-url" width="396" height="300" src={value.url}></iframe>
                                 </div>
                             )
                         })}
